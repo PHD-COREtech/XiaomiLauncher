@@ -3,6 +3,9 @@
 
 Thư mục này chứa đầy đủ công cụ cài đặt tự động 1-Click cho TV Launcher, đi kèm Bàn phím gõ tiếng Việt, Dịch vụ tìm kiếm giọng nói Google Tiếng Việt, và bộ công cụ **Debloat tắt toàn bộ ứng dụng rác ngốn RAM của TV gốc**.
 
+<img width="1920" height="1080" alt="HOME_SCREEN" src="https://github.com/user-attachments/assets/d4a0c1d7-8fc4-476c-a025-d6c2b247165f" />
+
+
 ---
 
 ## 📦 1. Các file có trong thư mục này
