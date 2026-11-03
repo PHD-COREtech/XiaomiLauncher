@@ -1,17 +1,42 @@
 # HƯỚNG DẪN CÀI ĐẶT TRỌN GÓI TV LAUNCHER, TỐI ƯU HỆ THỐNG & ĐIỀU KHIỂN GIỌNG NÓI
-### (Dành cho Android TV, Xiaomi MiTV, Redmi TV — Cài mới hoặc sau khi Factory Reset)
+### (Dành cho Xiaomi MiTV, Redmi TV (nội địa) — Cài mới hoặc sau khi Factory Reset)
 
 <img width="1920" height="1080" alt="HOME_SCREEN" src="https://github.com/user-attachments/assets/d4a0c1d7-8fc4-476c-a025-d6c2b247165f" />
 
-Thư mục này chứa đầy đủ công cụ cài đặt tự động 1-Click cho **TV Launcher**, đi kèm Bàn phím gõ tiếng Việt trên Remote, Dịch vụ tìm kiếm giọng nói Google Assistant tiếng Việt, bộ công cụ **Debloat tắt toàn bộ ứng dụng rác ngốn RAM của TV gốc**, và **Tài liệu hướng dẫn điều khiển giọng nói chi tiết**.
+Thư mục này chứa đầy đủ công cụ cài đặt tự động 1-Click cho **TV Launcher**, đi kèm Bàn phím gõ tiếng Việt trên Remote, Dịch vụ tìm kiếm giọng nói Google Assistant tiếng Việt, bộ công cụ **Debloat tắt toàn bộ ứng dụng rác ngốn RAM của TV gốc**, tự động cài đặt **Múi giờ Việt Nam GMT+7**, và **Tài liệu hướng dẫn điều khiển giọng nói chi tiết**.
 
 ---
 
-## 📦 1. Các File Có Trong Thư Mục Này
+## 📺 1. Thiết Bị Hỗ Trợ & Yêu Cầu Đời Android
+
+### 1.1. Các dòng TV tương thích
+* **Tối ưu chuyên sâu & tương thích 100%:** Toàn bộ các dòng **Smart TV Xiaomi**, **Redmi TV** (cả bản **Nội địa Trung Quốc xách tay** chạy ROM gốc MIUI TV / HyperOS TV và bản **Quốc tế**).
+  - *Các model tiêu biểu đã kiểm thử hoàn hảo:* Xiaomi Mi TV EA series (EA32, EA40, EA43, EA50, EA55, EA65, EA70, EA75...), dòng A series, A Pro, Redmi MAX (86", 98", 100"), Redmi Smart TV X series (X55, X65, X75), ES series, Mi TV P1, 4A, 4C, 4S...
+  - *Giải quyết triệt để các hạn chế của ROM Xiaomi gốc:*
+    - Chống lỗi ROM Xiaomi tự kill Launcher khi tắt TV bằng remote (chế độ STR standby) gây đen màn hình.
+    - Vô hiệu hóa launcher PatchWall tiếng Trung cùng hệ thống quảng cáo ngốn tới 600MB RAM.
+    - Cài đặt múi giờ chuẩn Việt Nam GMT+7 (`Asia/Ho_Chi_Minh`), không bị nhảy lệch sang giờ Bắc Kinh GMT+8.
+    - Tích hợp tìm kiếm giọng nói tiếng Việt mượt mà ngay trên nút Micro của Remote Bluetooth gốc.
+* **Tương thích rộng rãi:** Toàn bộ các dòng **Smart TV và Android TV Box** khác chạy hệ điều hành Android TV:
+  - Smart TV: Sony Bravia, TCL, Casper, Coocaa, Sharp, Philips, Skyworth, Toshiba...
+  - TV Box: Xiaomi Mi Box 4K, Mi TV Stick, Mecool, Chromecast with Google TV, TX3, Tanix, Eweat...
+
+### 1.2. Đời Android & Cấu hình phần cứng yêu cầu
+* **Phiên bản Android hỗ trợ:**
+  - Hỗ trợ từ **Android TV 9.0 (Pie / API 28)**, **Android TV 10 (Q / API 29)**, **Android TV 11 (Red Velvet Cake / API 30)** đến **Android TV 12 (API 31/32)** và **Android TV 13 (API 33)**.
+  - **Phiên bản khuyến nghị & tối ưu chuẩn nhất:** **Android TV 11 (targetSdk 30 / API level 30)** — hệ điều hành nền tảng của đa số dòng Xiaomi / Redmi TV.
+* **Kiến trúc CPU:** Hỗ trợ đầy đủ cả vi xử lý **32-bit (armeabi-v7a)** và **64-bit (arm64-v8a)**.
+* **Yêu cầu phần cứng tối thiểu:**
+  - RAM: Từ **1 GB RAM** trở lên (Launcher siêu nhẹ ~210 KB kết hợp debloat giải phóng ~500MB RAM, giúp TV RAM yếu chạy mượt như máy mới).
+  - Bộ nhớ trong (ROM): Trống tối thiểu **50 MB**.
+
+---
+
+## 📦 2. Các File Có Trong Thư Mục Này
 
 | Tên File | Chức năng | Ghi chú |
 | :--- | :--- | :--- |
-| **`install_tv.bat`** | Script tự động quét IP, kết nối ADB, cài đặt trọn gói, cấp quyền và debloat RAM | Chạy trực tiếp trên Windows (Khuyên dùng) |
+| **`install_tv.bat`** | Script tự động quét IP, kết nối ADB, cài đặt trọn gói, chỉnh giờ GMT+7, cấp quyền và debloat RAM | Chạy trực tiếp trên Windows (Khuyên dùng) |
 | **`debloat_xiaomi.bat`** | Script chuyên dùng để tự quét IP và tắt nhanh 15 app rác / ngốn RAM | Chạy riêng bất cứ lúc nào |
 | **`restore_bloatware.bat`** | Script tự quét IP và khôi phục (bật lại) toàn bộ các app gốc đã tắt | Dùng khi muốn đưa TV về nguyên bản |
 | **`Find_IP_SmartTV.bat`** | Công cụ độc lập quét tìm nhanh địa chỉ IP của Smart TV trong mạng LAN/Wi-Fi | Hiển thị ngay IP đang mở port 5555 |
@@ -23,7 +48,7 @@ Thư mục này chứa đầy đủ công cụ cài đặt tự động 1-Click 
 
 ---
 
-## ⚙️ 2. Chuẩn Bị Trên TV (Sau khi Factory Reset hoặc trên TV mới)
+## ⚙️ 3. Chuẩn Bị Trên TV (Sau khi Factory Reset hoặc trên TV mới)
 
 Sau khi TV khởi động vào màn hình ban đầu:
 1. Kết nối TV vào cùng mạng Wi-Fi với máy tính.
@@ -40,7 +65,7 @@ Sau khi TV khởi động vào màn hình ban đầu:
 
 ---
 
-## 🚀 3. Các Bước Cài Đặt Tự Động 1-Click
+## 🚀 4. Các Bước Cài Đặt Tự Động 1-Click
 
 1. Mở thư mục `INSTALL` trên máy tính Windows.
 2. Nhấp đúp chuột vào file **`install_tv.bat`**.
@@ -58,13 +83,13 @@ Sau khi TV khởi động vào màn hình ban đầu:
    - **[2/6]** Cài đặt Google Voice Assistant Katniss và cấp quyền Micro, Vị trí.
    - **[3/6]** Cài đặt TV Launcher, cấp quyền bảo mật `WRITE_SECURE_SETTINGS`, bộ nhớ, CPU/RAM.
    - **[4/6]** Cố định Role HOME mặc định và kích hoạt dịch vụ Voice Accessibility Service.
-   - **[5/6]** Cấu hình chống Xiaomi kill Launcher khi tắt TV (STR standby) và giữ cố định cổng ADB 5555.
+   - **[5/6]** Cài đặt múi giờ Việt Nam GMT+7 (`Asia/Ho_Chi_Minh`), tự động đồng bộ giờ qua mạng, cấu hình chống ROM Xiaomi kill Launcher khi tắt TV (STR standby) và giữ cố định cổng ADB 5555.
    - **[6/6]** Tự động vô hiệu hóa toàn bộ app rác, quảng cáo ngốn RAM (Debloat).
    - Tự động khởi chạy Launcher lên màn hình TV!
 
 ---
 
-## 🎙️ 4. HƯỚNG DẪN ĐIỀU KHIỂN & TÌM KIẾM GIỌNG NÓI (VOICE SEARCH)
+## 🎙️ 5. HƯỚNG DẪN ĐIỀU KHIỂN & TÌM KIẾM GIỌNG NÓI (VOICE SEARCH)
 
 Sau khi cài đặt xong, TV của bạn đã được trang bị công cụ nhận diện giọng nói tiếng Việt chuẩn xác và thông minh nhất. Dưới đây là hướng dẫn cách sử dụng remote và các câu lệnh mẫu:
 
@@ -171,7 +196,7 @@ Khi câu nói không khớp với lệnh mở kênh VTV hay mở ứng dụng, h
 
 ---
 
-## 🧹 5. Danh Sách Các Lệnh ADB Tắt Ứng Dụng Rác (Debloat RAM)
+## 🧹 6. Danh Sách Các Lệnh ADB Tắt Ứng Dụng Rác (Debloat RAM)
 
 Dưới đây là danh sách chi tiết các lệnh ADB dùng để vô hiệu hóa (`disable-user`) các ứng dụng gốc ngốn RAM, quảng cáo và dịch vụ chạy nền vô ích của Xiaomi. Các lệnh này đã được tích hợp sẵn trong `install_tv.bat` và `debloat_xiaomi.bat`:
 
@@ -226,7 +251,7 @@ adb shell pm disable-user --user 0 com.mitv.cloudcontrol
 
 ---
 
-## ⚠️ 6. Các Ứng Dụng Hệ Thống TUYỆT ĐỐI KHÔNG ĐƯỢC TẮT
+## ⚠️ 7. Các Ứng Dụng Hệ Thống TUYỆT ĐỐI KHÔNG ĐƯỢC TẮT
 
 Không được tắt các package sau đây vì sẽ gây lỗi treo TV (bootloop) hoặc mất menu cài đặt:
 - `com.xiaomi.mitv.settings` (Cài đặt hệ thống TV)
@@ -237,11 +262,13 @@ Không được tắt các package sau đây vì sẽ gây lỗi treo TV (bootlo
 
 ---
 
-## 🌟 7. Các Tính Năng Sau Khi Cài Đặt Thành Công
+## 🌟 8. Các Tính Năng Sau Khi Cài Đặt Thành Công
 
 - **Mở máy là vào Launcher**: TV khởi động hoặc bật từ chế độ tắt bằng remote (STR sleep) đều vào thẳng Launcher ngay lập tức.
 - **Phím HOME chuẩn 100%**: Bấm nút Home ở bất kỳ ứng dụng nào (YouTube, VTV Go, NetFlix, FPT Play...) đều quay về màn hình chính tức thì.
 - **Nút Voice remote**: Bấm nút Micro trên Remote Xiaomi/Android TV sẽ kích hoạt Google Assistant Katniss tiếng Việt siêu nhạy.
+- **Múi giờ chuẩn Việt Nam**: Tự động đặt múi giờ GMT+7 (`Asia/Ho_Chi_Minh`), không lo bị nhảy sang giờ Bắc Kinh Trung Quốc.
 - **Bàn phím tiếng Việt**: Khi gõ tìm kiếm, bàn phím LeanKey tự mở to, dễ bấm bằng phím điều hướng remote.
 - **Tiết kiệm RAM tối đa**: RAM trống thêm **300MB - 600MB**, CPU mát hơn và TV mượt mà hơn rất nhiều so với ROM gốc.
 - **Đầy đủ Widget**: Thời tiết địa phương tự nhận diện, Lịch Âm ngày lễ Việt Nam, Bảng Giá Xăng Dầu Petrolimex và Bảng Giá Vàng SJC cập nhật trực tiếp theo thời gian thực.
+- **Tùy biến sắp xếp ứng dụng**: Tự do đổi chỗ, đưa app lên đầu hàng trên dock ngang theo ý thích người dùng.
