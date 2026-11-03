@@ -69,14 +69,19 @@ if exist "!SCAN_OUT!" (
 )
 
 if not "!AUTO_IP!"=="" (
-    echo.
-    echo ======================================================================
-    echo  [OK] DA TU DONG PHAT HIEN SMART TV TAI IP: !AUTO_IP!
-    echo ======================================================================
     set TV_IP=!AUTO_IP!
-    goto DO_CONNECT
+    goto AUTO_FOUND
 )
+goto MANUAL_IP
 
+:AUTO_FOUND
+echo.
+echo ======================================================================
+echo  [OK] DA TU DONG PHAT HIEN SMART TV TAI IP: !TV_IP!
+echo ======================================================================
+goto DO_CONNECT
+
+:MANUAL_IP
 echo.
 echo [!] Quet tu dong khong tim thay TV nao dang mo cong ADB 5555.
 echo.
@@ -189,8 +194,15 @@ echo [4/6] Thiet lap Role HOME mac dinh va kich hoat Voice Accessibility Service
 "%ADB%" shell settings put secure voice_interaction_service com.google.android.katniss/.search.serviceapi.KatnissVoiceInteractionService >nul 2>&1
 "%ADB%" shell settings put secure voice_recognition_service com.google.android.katniss/.search.serviceapi.KatnissRecognitionService >nul 2>&1
 
-:: [BUOC 5]: CHONG ROM XIAOMI FORCE-STOP VA GIU CONG ADB 5555
-echo [5/6] Cau hinh chong ROM Xiaomi kill app khi sleep STR va co dinh cong ADB 5555...
+:: [BUOC 5]: CAI DAT MUI GIO GMT+7, CHONG XIAOMI KILL APP VA CO DINH ADB 5555
+echo [5/6] Cai dat mui gio GMT+7, chong Xiaomi kill app va giu cong ADB 5555...
+echo [*] Cai dat mui gio Viet Nam GMT+7 [Asia/Ho_Chi_Minh] va dong bo gio mang...
+"%ADB%" shell setprop persist.sys.timezone Asia/Ho_Chi_Minh >nul 2>&1
+"%ADB%" shell settings put global time_zone Asia/Ho_Chi_Minh >nul 2>&1
+"%ADB%" shell service call alarm 3 s16 Asia/Ho_Chi_Minh >nul 2>&1
+"%ADB%" shell settings put global auto_time 1 >nul 2>&1
+"%ADB%" shell settings put global auto_time_zone 0 >nul 2>&1
+
 "%ADB%" shell settings put global disable_back_home_whitelist disable >nul 2>&1
 "%ADB%" shell settings put global device_provisioned 1 >nul 2>&1
 "%ADB%" shell settings put secure user_setup_complete 1 >nul 2>&1
@@ -244,6 +256,7 @@ echo  3. Phim Voice tim kiem tieng Viet Google hoat dong tron tru.
 echo  4. Tat/bat TV bang remote [STR sleep] khong bi man hinh den.
 echo  5. He thong da duoc don sach app rac, RAM trong toi da.
 echo  6. Cong ADB 5555 luon mo san cho lan bao tri tiep theo.
+echo  7. Mui gio TV da duoc cai ve GMT+7 [Asia/Ho_Chi_Minh] chuan gio Viet Nam.
 echo ======================================================================
 echo.
 pause
