@@ -11,15 +11,12 @@ Thư mục này chứa đầy đủ công cụ cài đặt tự động 1-Click 
 
 ### 1.1. Các dòng TV tương thích
 * **Tối ưu chuyên sâu & tương thích 100%:** Toàn bộ các dòng **Smart TV Xiaomi**, **Redmi TV** (cả bản **Nội địa Trung Quốc xách tay** chạy ROM gốc MIUI TV / HyperOS TV và bản **Quốc tế**).
-  - *Các model tiêu biểu đã kiểm thử hoàn hảo:* Xiaomi Mi TV EA series (EA32, EA40, EA43, EA50, EA55, EA65, EA70, EA75...), dòng A series, A Pro, Redmi MAX (86", 98", 100"), Redmi Smart TV X series (X55, X65, X75), ES series, Mi TV P1, 4A, 4C, 4S...
+  - *Các model tiêu biểu đã kiểm thử hoàn hảo:* Xiaomi Mi TV EA series (EA32, EA40, EA43, EA50, EA55, EA65, EA70, EA75...), dòng A series, A Pro, Redmi MAX (86", 98", 100"), Redmi Smart TV X series (X55, X65, X75), ES series, Mi TV P1, 4A, 4C, 4S... (Android 11, SDK 30)
   - *Giải quyết triệt để các hạn chế của ROM Xiaomi gốc:*
     - Chống lỗi ROM Xiaomi tự kill Launcher khi tắt TV bằng remote (chế độ STR standby) gây đen màn hình.
     - Vô hiệu hóa launcher PatchWall tiếng Trung cùng hệ thống quảng cáo ngốn tới 600MB RAM.
     - Cài đặt múi giờ chuẩn Việt Nam GMT+7 (`Asia/Ho_Chi_Minh`), không bị nhảy lệch sang giờ Bắc Kinh GMT+8.
     - Tích hợp tìm kiếm giọng nói tiếng Việt mượt mà ngay trên nút Micro của Remote Bluetooth gốc.
-* **Tương thích rộng rãi:** Toàn bộ các dòng **Smart TV và Android TV Box** khác chạy hệ điều hành Android TV:
-  - Smart TV: Sony Bravia, TCL, Casper, Coocaa, Sharp, Philips, Skyworth, Toshiba...
-  - TV Box: Xiaomi Mi Box 4K, Mi TV Stick, Mecool, Chromecast with Google TV, TX3, Tanix, Eweat...
 
 ### 1.2. Đời Android & Cấu hình phần cứng yêu cầu
 * **Phiên bản Android hỗ trợ:**
