@@ -37,7 +37,6 @@ Thư mục này chứa đầy đủ công cụ cài đặt tự động 1-Click 
 | **`debloat_xiaomi.bat`** | Script chuyên dùng để tự quét IP và tắt nhanh 15 app rác / ngốn RAM | Chạy riêng bất cứ lúc nào |
 | **`restore_bloatware.bat`** | Script tự quét IP và khôi phục (bật lại) toàn bộ các app gốc đã tắt | Dùng khi muốn đưa TV về nguyên bản |
 | **`Find_IP_SmartTV.bat`** | Công cụ độc lập quét tìm nhanh địa chỉ IP của Smart TV trong mạng LAN/Wi-Fi | Hiển thị ngay IP đang mở port 5555 |
-| **`Find_IP_SmartTV.ps1`** | Module PowerShell quét IP đa luồng 60 worker siêu tốc (~5 giây) | Được gọi ngầm bởi các script `.bat` |
 | **`tvlauncher.apk`** | Bộ TV Launcher siêu nhẹ (~210 KB), thuần Java 8 không thư viện rác | Application ID: `com.ts.launcher` |
 | **`google_voice.apk`** | Google Katniss Voice Search tiếng Việt chuẩn TV | Tích hợp nút Voice trên Remote |
 | **`keyboard.apk`** | LeanKey Keyboard Pro (bàn phím tiếng Việt dành riêng cho Remote TV) | Tự động kích hoạt làm bàn phím chính |
