@@ -38,6 +38,7 @@ Thư mục này chứa đầy đủ công cụ cài đặt tự động 1-Click 
 | **`restore_bloatware.bat`** | Script tự quét IP và khôi phục (bật lại) toàn bộ các app gốc đã tắt | Dùng khi muốn đưa TV về nguyên bản |
 | **`Find_IP_SmartTV.bat`** | Công cụ độc lập quét tìm nhanh địa chỉ IP của Smart TV trong mạng LAN/Wi-Fi | Hiển thị ngay IP đang mở port 5555 |
 | **`tvlauncher.apk`** | Bộ TV Launcher siêu nhẹ (~210 KB), thuần Java 8 không thư viện rác | Application ID: `com.ts.launcher` |
+| **`tvcontrol_release.apk`** | Apps cài trên điện thoại dùng để điều khiển TV thông qua Launcher, thuần Java 8 không thư viện rác | Application ID: `vn.herotran.tvcontrol` |
 | **`google_voice.apk`** | Google Katniss Voice Search tiếng Việt chuẩn TV | Tích hợp nút Voice trên Remote |
 | **`keyboard.apk`** | LeanKey Keyboard Pro (bàn phím tiếng Việt dành riêng cho Remote TV) | Tự động kích hoạt làm bàn phím chính |
 | **`adb.exe`, `AdbWinApi.dll`, `AdbWinUsbApi.dll`** | Bộ công cụ kết nối Android Debug Bridge (ADB) độc lập | Chạy ngay không cần cài Android Studio |
